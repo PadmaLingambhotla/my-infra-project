@@ -16,22 +16,22 @@ pipeline {
         }
         stage('Initialize Terraform') {
             steps {
-                bat 'terraform init'
+                bat '"C:\\Windows\\System32\\cmd.exe" /c terraform init'
             }
         }
         stage('Validate Terraform') {
             steps {
-                bat 'terraform validate'
+                bat '"C:\\Windows\\System32\\cmd.exe" /c terraform validate'
             }
         }
         stage('Plan Terraform') {
             steps {
-                bat 'terraform plan'
+                bat '"C:\\Windows\\System32\\cmd.exe" /c terraform plan'
             }
         }
         stage('Apply Terraform') {
             steps {
-                bat 'terraform apply -auto-approve'
+                bat '"C:\\Windows\\System32\\cmd.exe" /c terraform apply -auto-approve'
             }
         }
     }
