@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AZURE_CREDENTIALS = credentials('Terraform')
+        AZURE_CREDENTIALS = credentials('azure-service-principal')
     }
 
     stages {
